@@ -125,4 +125,14 @@ const CourseInfo = {
     }
 
 
+    //Collect submission date from LearnerSubmissions
+    let submissionDate;
+    try {
+        submissionDate = new Date(submission.submission.submitted_at);
+        if (isNaN(submissionDate)) throw new Error("Invalid submission date format");
+    } catch (error) {
+        console.error("Error with submission date:", error);
+        continue;
+    }
+
     .         
