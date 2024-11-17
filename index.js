@@ -138,4 +138,13 @@ const CourseInfo = {
     //Collect points possible from AssignmentGroup
     const pointsPossible = assignment.points_possible;    
 
-    .         
+    //If the learner’s submission is late deduct 10 percent of the total points possible from their score for that assignment.
+    let learnerScore = submission.submission.score;
+    const isLate = new Date(submissionDate) > new Date(dueDate);
+    if (isLate) {
+        learnerScore -= pointsPossible * 0.1;
+    } else {
+        // console.log("Assignment submitted on time");
+    }
+
+    .        
