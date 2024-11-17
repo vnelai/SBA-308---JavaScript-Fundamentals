@@ -80,4 +80,12 @@ const CourseInfo = {
   ];
 
 
-  
+  function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
+    //If an AssignmentGroup does not belong to its course (mismatching course_id), your program should throw an error,
+    if (AssignmentGroup.course_id != CourseInfo.id) {
+        throw new Error ("Invalid, mismatching course id");
+    } 
+
+    const results = []; //empty array to store learners' data
+
+    
