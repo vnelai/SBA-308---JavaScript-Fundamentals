@@ -93,4 +93,17 @@ const CourseInfo = {
         const learnerId = submission.learner_id;
         const assignmentId = submission.assignment_id; 
 
-       
+    //Check to see if assignmentID matches assignment id from AssignmentGroup
+    let assignment = null;
+    for (let i = 0; i < AssignmentGroup.assignments.length; i++) {
+        if (AssignmentGroup.assignments[i].id === assignmentId) {
+            assignment = AssignmentGroup.assignments[i];
+            break; //If assignment found exit loop
+        }
+    }
+
+    if (!assignment) continue; //Skip if AssignmentGroup is missing the assignment id
+
+
+
+.        
