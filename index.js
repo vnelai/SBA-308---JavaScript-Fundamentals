@@ -147,4 +147,16 @@ const CourseInfo = {
         // console.log("Assignment submitted on time");
     }
 
+    //Check if learner exists in results
+    let learner = results.find(l => l.id === learnerId);
+
+    if (!learner) {
+        // If learner with the same id not found, create a new learner object
+        learner = { id: learnerId, avg: 0,  totalScore: 0, totalPossible: 0};
+        results.push(learner); // Add the new learner to the results array
+    } else {
+        //Do nothing
+    }
+
+
     .        
