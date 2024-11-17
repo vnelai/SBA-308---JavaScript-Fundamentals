@@ -106,4 +106,15 @@ const CourseInfo = {
 
 
 
-.        
+    //Collect due dates from AssignmentGroup
+    let dueDate;
+    try {
+        dueDate = new Date(assignment.due_at);
+        if (isNaN(dueDate)) throw new Error("Invalid date format");
+      } catch (error) {
+        console.error("Error with due date:", error);
+        continue;
+      }
+
+
+    .         
