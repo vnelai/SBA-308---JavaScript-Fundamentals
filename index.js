@@ -166,4 +166,14 @@ const CourseInfo = {
     }   
 
 
-       
+//Calculate Average 
+for (const learner of results) {
+    learner.avg = parseFloat((learner.totalScore / learner.totalPossible).toFixed(3));
+    delete learner.totalScore; 
+    delete learner.totalPossible;
+}
+
+return results;
+
+}
+        
