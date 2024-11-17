@@ -88,4 +88,9 @@ const CourseInfo = {
 
     const results = []; //empty array to store learners' data
 
-    
+    //Loop through LearnerSubmissions to get learner id and assignment id
+    for (const submission of LearnerSubmissions) {
+        const learnerId = submission.learner_id;
+        const assignmentId = submission.assignment_id; 
+
+       
