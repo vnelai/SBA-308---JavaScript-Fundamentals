@@ -159,4 +159,11 @@ const CourseInfo = {
     }
 
 
-    .        
+    // Update learner submissions
+    learner[assignmentId] = parseFloat((learnerScore / pointsPossible).toFixed(3)); 
+    learner.totalScore += learnerScore; 
+    learner.totalPossible += pointsPossible;
+    }   
+
+
+       
