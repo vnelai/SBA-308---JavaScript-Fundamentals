@@ -176,4 +176,6 @@ for (const learner of results) {
 return results;
 
 }
-        
+
+const result = getLearnerData(CourseInfo, AssignmentGroup,  LearnerSubmissions);
+console.log(result);     
