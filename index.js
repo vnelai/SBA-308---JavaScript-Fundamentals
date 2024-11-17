@@ -117,4 +117,12 @@ const CourseInfo = {
       }
 
 
+    // If an assignment is not yet due, do not include it in the results or the average.
+    if (new Date(dueDate) > new Date()) {
+        continue; // Skip assignment if not yet due
+    } else {
+        // console.log("Assignment is due");
+    }
+
+
     .         
