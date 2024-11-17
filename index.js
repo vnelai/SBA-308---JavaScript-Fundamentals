@@ -135,4 +135,7 @@ const CourseInfo = {
         continue;
     }
 
+    //Collect points possible from AssignmentGroup
+    const pointsPossible = assignment.points_possible;    
+
     .         
